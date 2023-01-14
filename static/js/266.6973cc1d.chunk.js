@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_08=self.webpackChunkreact_homework_08||[]).push([[266],{1266:function(e,r,n){n.r(r),n.d(r,{default:function(){return o}});var a=n(2134),c=n(3329);function o(){return(0,c.jsx)("div",{children:(0,c.jsxs)("h1",{children:[(0,c.jsx)("span",{role:"img","aria-label":"logo icon",children:(0,c.jsx)(a.Wt0,{size:"30px",color:"#9f40ff"})})," ","Task manager welcome page"]})})}}}]);
+//# sourceMappingURL=266.6973cc1d.chunk.js.map
