@@ -3,25 +3,26 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
-} from 'redux/contacts/operations';
-import { initialContacts } from './initialContactsData';
+} from 'redux/contacts/contactsOperations';
+import { logOut } from '../auth/authOperations';
 
 const handlePending = state => {
   state.isLoading = true;
 };
 
-const handleRejected = (state, action) => {
+const handleRejected = (state, { payload }) => {
   state.isLoading = false;
-  state.error = action.payload;
+  state.error = payload;
 };
 
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    items: initialContacts,
+    items: [],
     isLoading: false,
     error: null,
   },
+
   extraReducers: {
     [fetchContacts.pending]: handlePending,
     [fetchContacts.fulfilled](state, { payload }) {
@@ -30,6 +31,7 @@ const contactsSlice = createSlice({
       state.items = payload;
     },
     [fetchContacts.rejected]: handleRejected,
+
     [addContact.pending]: handlePending,
     [addContact.fulfilled](state, { payload }) {
       state.isLoading = false;
@@ -37,6 +39,7 @@ const contactsSlice = createSlice({
       state.items.push(payload);
     },
     [addContact.rejected]: handleRejected,
+
     [deleteContact.pending]: handlePending,
     [deleteContact.fulfilled](state, { payload }) {
       state.isLoading = false;
@@ -45,6 +48,12 @@ const contactsSlice = createSlice({
       state.items.splice(index, 1);
     },
     [deleteContact.rejected]: handleRejected,
+
+    [logOut.fulfilled](state) {
+      state.items = [];
+      state.error = null;
+      state.isLoading = false;
+    },
   },
 });
 

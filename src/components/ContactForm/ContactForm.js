@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contacts/operations';
+import { addContact } from 'redux/contacts/contactsOperations';
 import { useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from '../../redux/contacts/contactsSelectors';
 
 import { Formik } from 'formik';
-import { FormStyled, Label, Input, Button } from '../Component.styled';
+import { FormStyled, Label, Input, Button } from './ContactForm.styled';
 
-import FormError from '../FormikComponents/errorMessageFormik';
+import FormError from '../FormikComponents/ErrorMessageFormik';
 
 import { initialValues } from './initialValuesData';
 import { validationSchema } from './yup-validation';

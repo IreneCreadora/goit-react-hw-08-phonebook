@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contacts/operations';
+import { deleteContact } from 'redux/contacts/contactsOperations';
 
 import propTypes from 'prop-types';
-import { ContactItemStyled, Wrapper, DeleteBtn } from '../Component.styled';
+import { ContactItemStyled, Wrapper, DeleteBtn } from './ContactList.styled';
 
 const ContactItem = ({ contact }) => {
   const { id, name, number } = contact;

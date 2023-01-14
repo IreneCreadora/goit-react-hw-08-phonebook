@@ -1,5 +1,5 @@
 import { ErrorMessage } from 'formik';
-import { ErrorText } from '../Component.styled';
+import { ErrorText } from './ErrorMessage.styled';
 
 const FormError = ({ name }) => {
   return (
