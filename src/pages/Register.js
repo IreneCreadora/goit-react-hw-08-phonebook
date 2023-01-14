@@ -1,13 +1,14 @@
 import { Helmet } from 'react-helmet';
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+import { Container } from './ContactsPage.styled';
 
 export default function Register() {
   return (
-    <div>
+    <Container>
       <Helmet>
         <title>Registration</title>
       </Helmet>
       <RegisterForm />
-    </div>
+    </Container>
   );
 }
