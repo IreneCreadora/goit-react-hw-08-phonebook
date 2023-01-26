@@ -21,14 +21,10 @@ export const LoginForm = () => {
 
   return (
     <FormStyled onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Email
-        <Input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <Input type="password" name="password" />
-      </Label>
+      <Label>Email</Label>
+      <Input type="email" name="email" />
+      <Label>Password</Label>
+      <Input type="password" name="password" />
       <Button type="submit" loading={authIsLoading}>
         Log In
       </Button>

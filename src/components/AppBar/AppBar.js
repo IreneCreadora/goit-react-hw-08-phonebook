@@ -2,9 +2,9 @@ import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import { useAuth } from '../../hooks/useAuth';
-import { AiOutlineIdcard } from 'react-icons/ai';
+import { AiOutlineUserAdd } from 'react-icons/ai';
 
-import { Header, Logo } from './AppBar.styled';
+import { Header, Logo, Nav } from './AppBar.styled';
 
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
@@ -12,13 +12,13 @@ export const AppBar = () => {
   return (
     <Header>
       <Logo>
-        <span role="img" aria-label="logo icon">
-          <AiOutlineIdcard size="30px" color="#9f40ff" />
-        </span>{' '}
+        <AiOutlineUserAdd size="20px" color="#9f40ff" />
         MY CONTACTS
       </Logo>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      <Nav>
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </Nav>
     </Header>
   );
 };

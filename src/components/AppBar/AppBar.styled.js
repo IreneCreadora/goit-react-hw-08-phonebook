@@ -11,6 +11,14 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.p`
+  display: flex;
   font-weight: 700;
   margin: 0;
+  color: #9f40ff;
+`;
+
+export const Nav = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

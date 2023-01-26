@@ -29,8 +29,9 @@ export default function ContactsPage() {
   return (
     <Container>
       <Helmet>
-        <Phonebook>Phonebook</Phonebook>
+        <title>Phonebook</title>
       </Helmet>
+      <Phonebook>Phonebook</Phonebook>
       <ContactForm />
       {isLoading && !error && <b>Request in progress...</b>}
       <Contacts>Contacts</Contacts>

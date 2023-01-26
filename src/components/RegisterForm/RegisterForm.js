@@ -22,18 +22,12 @@ export const RegisterForm = () => {
 
   return (
     <FormStyled onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Username
-        <Input type="text" name="name" />
-      </Label>
-      <Label>
-        Email
-        <Input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <Input type="password" name="password" />
-      </Label>
+      <Label>Username</Label>
+      <Input type="text" name="name" />
+      <Label>Email</Label>
+      <Input type="email" name="email" />
+      <Label>Password</Label>
+      <Input type="password" name="password" />
       <Button type="submit" loading={authIsLoading}>
         Register
       </Button>

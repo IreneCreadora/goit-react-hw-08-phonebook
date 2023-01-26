@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 
 export const ContactListStyled = styled.ul`
+  margin-top: 16px;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 20px;
 `;
 
 export const ContactItemStyled = styled.li`
@@ -12,8 +13,8 @@ export const ContactItemStyled = styled.li`
   justify-content: space-between;
   align-items: center;
   margin: 4px 0;
-  padding: 5px 10px;
-  border-radius: 5%;
+  padding: 5px 20px;
+  border-radius: 4px;
   border: 1px solid gray;
   font-weight: 400;
   font-size: 16px;
@@ -37,4 +38,9 @@ export const DeleteBtn = styled.button`
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 5px #000;
+  &:hover,
+  &:focus {
+    color: #45baff;
+    border: 1px solid black;
+  }
 `;
