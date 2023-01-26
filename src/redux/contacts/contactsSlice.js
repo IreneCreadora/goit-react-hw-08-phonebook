@@ -23,37 +23,37 @@ const contactsSlice = createSlice({
     error: null,
   },
 
-  extraReducers: {
-    [fetchContacts.pending]: handlePending,
-    [fetchContacts.fulfilled](state, { payload }) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = payload;
-    },
-    [fetchContacts.rejected]: handleRejected,
+  extraReducers: builder => {
+    builder
+      .addCase(fetchContacts.pending, handlePending)
+      .addCase(fetchContacts.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = payload;
+      })
+      .addCase(fetchContacts.rejected, handleRejected)
 
-    [addContact.pending]: handlePending,
-    [addContact.fulfilled](state, { payload }) {
-      state.isLoading = false;
-      state.error = null;
-      state.items.push(payload);
-    },
-    [addContact.rejected]: handleRejected,
+      .addCase(addContact.pending, handlePending)
+      .addCase(addContact.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items.push(payload);
+      })
+      .addCase(addContact.rejected, handleRejected)
 
-    [deleteContact.pending]: handlePending,
-    [deleteContact.fulfilled](state, { payload }) {
-      state.isLoading = false;
-      state.error = null;
-      const index = state.items.findIndex(contact => contact.id === payload.id);
-      state.items.splice(index, 1);
-    },
-    [deleteContact.rejected]: handleRejected,
+      .addCase(deleteContact.pending, handlePending)
+      .addCase(deleteContact.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = state.items.filter(contact => contact.id !== payload.id);
+      })
+      .addCase(deleteContact.rejected, handleRejected)
 
-    [logOut.fulfilled](state) {
-      state.items = [];
-      state.error = null;
-      state.isLoading = false;
-    },
+      .addCase(logOut.fulfilled, state => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      });
   },
 });
 
