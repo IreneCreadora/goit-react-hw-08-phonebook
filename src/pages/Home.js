@@ -16,9 +16,10 @@ export default function Home() {
       <Header>Welcome to Your Contacts Book</Header>
       {!isLoggedIn && (
         <p>
-          For you available{' '}
-          <LinkStyled to="/register"> registration </LinkStyled> or{' '}
-          <LinkStyled to="/login">login</LinkStyled> if you are already with us.
+          Feel free to{' '}
+          <LinkStyled to="/register"> create an account </LinkStyled> or{' '}
+          <LinkStyled to="/login">login</LinkStyled> if you already registered
+          with us.
           <br></br>
           Enter your personal account, use our service and enjoy.
         </p>

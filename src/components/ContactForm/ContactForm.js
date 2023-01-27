@@ -41,11 +41,7 @@ const ContactForm = () => {
         <div>
           <Label htmlFor="name">Full name</Label>
           <div>
-            <Input
-              name="name"
-              type="text"
-              placeholder="write down the name..."
-            />
+            <Input name="name" type="text" placeholder="please add name..." />
             <FormError name="name" />
           </div>
         </div>
@@ -55,7 +51,7 @@ const ContactForm = () => {
             <Input
               name="number"
               type="text"
-              placeholder="write down the phone number..."
+              placeholder="please add phone number..."
             />
             <FormError name="number" />
           </div>
