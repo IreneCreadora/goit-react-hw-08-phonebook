@@ -14,6 +14,7 @@ export default function Home() {
         <AiOutlineIdcard size="120px" color="#9f40ff" />
       </span>
       <Header>Welcome to Your Contacts Book</Header>
+
       {!isLoggedIn && (
         <p>
           Feel free to{' '}
