@@ -13,7 +13,7 @@ export const SharedLayout = () => {
       <Suspense
         fallback={
           <Loader>
-            <InfinitySpin width="200" color="#9f40ff" />
+            <InfinitySpin width="500" color="#9f40ff" />
           </Loader>
         }
       >
