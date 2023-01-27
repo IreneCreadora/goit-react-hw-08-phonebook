@@ -10,7 +10,15 @@ export const SharedLayout = () => {
   return (
     <Container>
       <AppBar />
-      <Suspense fallback={<InfinitySpin width="200" color="#9f40ff" />}>
+      <Suspense
+        fallback={
+          <InfinitySpin
+            width="200"
+            color="#9f40ff"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          />
+        }
+      >
         <Outlet />
       </Suspense>
       <ToastContainer />
