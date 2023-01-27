@@ -4,7 +4,7 @@ import { InfinitySpin } from 'react-loader-spinner';
 import { ToastContainer } from 'react-toastify';
 
 import { AppBar } from '../AppBar/AppBar';
-import { Container } from './SharedLayout.styled';
+import { Container, Loader } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
   return (
@@ -12,11 +12,9 @@ export const SharedLayout = () => {
       <AppBar />
       <Suspense
         fallback={
-          <InfinitySpin
-            width="200"
-            color="#9f40ff"
-            style={{ display: 'flex', justifyContent: 'center' }}
-          />
+          <Loader>
+            <InfinitySpin width="200" color="#9f40ff" />
+          </Loader>
         }
       >
         <Outlet />
