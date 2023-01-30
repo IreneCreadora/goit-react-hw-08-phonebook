@@ -1,7 +1,8 @@
+import { AiFillEdit } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/authOperations';
 import { useAuth } from '../../hooks/useAuth';
-import { FormStyled, Label, Input, Button } from './RegisterForm.styled';
+import { FormStyled, Icon, Label, Input, Button } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,10 @@ export const RegisterForm = () => {
 
   return (
     <FormStyled onSubmit={handleSubmit} autoComplete="off">
+      <Icon>
+        <AiFillEdit size="80px" color="#9f40ff" />
+      </Icon>
+
       <Label>Username</Label>
       <Input type="text" name="name" />
       <Label>Email</Label>

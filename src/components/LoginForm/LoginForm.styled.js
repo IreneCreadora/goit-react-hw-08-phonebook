@@ -21,6 +21,12 @@ export const Input = styled.input`
   color: antiquewhite;
 `;
 
+export const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Label = styled.label`
   display: flex;
   flex-direction: column;

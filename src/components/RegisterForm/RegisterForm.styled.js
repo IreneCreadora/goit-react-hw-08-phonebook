@@ -10,6 +10,13 @@ export const FormStyled = styled.form`
   line-height: 1.33;
   color: white;
 `;
+
+export const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Input = styled.input`
   width: 100%;
   background-color: inherit;

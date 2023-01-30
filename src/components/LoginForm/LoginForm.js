@@ -1,7 +1,8 @@
+import { AiFillHome } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/authOperations';
 import { useAuth } from '../../hooks/useAuth';
-import { FormStyled, Input, Label, Button } from './LoginForm.styled';
+import { FormStyled, Icon, Input, Label, Button } from './LoginForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,11 @@ export const LoginForm = () => {
 
   return (
     <FormStyled onSubmit={handleSubmit} autoComplete="off">
+      <Icon>
+        {' '}
+        <AiFillHome size="80px" color="#9f40ff" />
+      </Icon>
+
       <Label>Email</Label>
       <Input type="email" name="email" />
       <Label>Password</Label>
